@@ -15,7 +15,7 @@ public class CalculatorTest {
 	}
 
 	@Test
-	public void test() {
+	public void testAdd() {
 		// Arrange
 		int a = 4321;
 		int b = 1234;
@@ -58,6 +58,22 @@ public class CalculatorTest {
 		
 		// Assert
 		int expected = 15;
+		assertEquals (expected, actual);
+	}
+	
+	@Test
+	public void testDivide()
+	{
+		// Arrange
+		int a = 10;
+		int b = 2;
+		Calculator cal = new Calculator();
+		
+		// Act
+		int actual = cal.divide(a, b);
+		
+		// Assert
+		int expected = 5;
 		assertEquals (expected, actual);
 	}
 }
